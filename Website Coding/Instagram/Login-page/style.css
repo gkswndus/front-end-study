@@ -1,0 +1,302 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    padding: 40px 1px;
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.frame-image {
+    display: none;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center; 
+}
+
+button:focus,
+button:active,
+input:focus,
+input:active,
+textarea:focus,
+textarea:active {
+  outline: none;
+  box-shadow: none;
+}
+
+content {
+    position: relative;
+}
+
+/* Header */
+.logo {
+    display: block;
+    width: 180px;
+    height: auto;
+    margin: 0 auto 30px;
+    cursor: pointer;
+}
+
+/* Login */
+.login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.login input {
+    width: 100%;
+    max-width: 268px;
+    height: 38px;
+    margin-bottom: 15px;
+    padding: 4px 8px;
+    font-size: 13px;
+    border: 1px solid rgb(219, 219, 219);
+    border-radius: 3px;
+    background-color: #fafafab3;
+}
+
+.login input:first-child {
+    margin-bottom: 6px;
+}
+
+.login button {
+    width: 100%;
+    max-width: 268px;
+    height: 32px;
+    border: none;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 0.05em;
+    color: white;
+    background-color: #3cb1ff;
+}
+
+.login .line-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 268px;
+    height: 36px;
+    margin: 10px 0;
+    font-size: 14px;
+    color: rgb(70, 70, 70);
+}
+
+.login .line-text::before,
+.login .line-text::after {
+    content: "";
+    flex-grow: 1;
+    background: rgba(128,128,128,0.3);
+    height: 1.8px;
+}
+
+.login .line-text span {
+    margin: 0 25px;
+}
+
+.login .facebook-login {
+    display: block;
+    margin-bottom: 20px;
+}
+
+.login 
+.facebook-login img {
+    display: inline-block;
+    width: 16px;
+    height: auto;
+    margin-right: 2px;
+}
+
+.login .facebook-login strong {
+    font-size: 14px;
+    color: rgb(56, 81, 133);
+}
+
+.login .find-password {
+    display: block;
+    font-size: 13px;
+}
+
+/* Register */
+.register {
+    display: block;
+    margin: 100px auto;
+}
+
+.register span {
+    font-size: 15px;
+}
+
+.register strong {
+    color: #3cb1ff;
+}
+
+/* Download */
+.download {
+    margin-bottom: 65px;
+    font-size: 15px;
+}
+
+.download span {
+    display: block;
+    margin-bottom: 15px;
+}
+
+.download-icon img {
+    display: inline;
+    height: 40px;
+    width: auto;
+    margin: 0 auto 12px;
+}
+
+.download-icon img:first-child {
+    margin-right: 5px;
+}
+
+/* Footer */
+.footer-row {
+    position: a;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    line-height: 2;
+    letter-spacing: 0.04em;
+    color: rgb(104, 104, 104);
+}
+
+.footer-row:first-child {
+    margin-bottom: 15px;
+}
+
+.footer-row a {
+    margin-right: 15px;
+}
+
+.footer-row .language {
+    margin-right: 10px;
+    border: none;
+    color: rgb(104, 104, 104);
+}
+
+.footer-row p {
+    margin-bottom: 0;
+}
+
+/* Desktop */
+@media screen and (min-width:450px) {
+
+    body {
+        padding: 100px 0;
+    }
+
+
+    .main-box {
+        width: 350px;
+        border: 1px solid rgb(219, 219, 219);
+        border-radius: 2px;    
+        margin-bottom: 10px;  
+    }
+
+    .main-content {
+        margin: 40px 0 20px;
+    }
+
+    /* Register */
+    .sub-box {
+        width: 350px;  
+        border: 1px solid rgb(219, 219, 219);
+        border-radius: 2px;  
+        margin-bottom: 15px;
+    }
+    .register {   
+        margin: 20px 0;
+    }
+
+    .download {
+        margin-bottom: 80px;
+    }
+
+}
+
+@media screen and (min-width:875px) {
+
+    .content {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-bottom: 50px;
+    }
+
+    .frame-image {
+        display: block;
+        position: relative;
+    }
+
+    .frame-image img {
+        display: block;
+        width: 400px;
+        height: auto;  
+        background-repeat: no-repeat;
+        background-size: 270px 560px;
+        background-position: center 8px ;
+        border-radius: 28%;      
+    }
+
+    .frame-top {
+        position: absolute;
+        z-index: 1;
+        background-image: url(./images/frame-image-2.jpg);
+        animation-name: image-transition;
+        animation-duration: 7s;
+        animation-delay: 2s;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+    }
+
+    .frame-bottom {      
+        position: relative;
+        bottom: 10px;
+        right: 100px;  
+        background-image: url(./images/frame-image-1.jpg);
+    }
+
+    @keyframes image-transition {
+        /* 50% {
+            background-image: url(./images/frame-image-2.jpg);
+        } */
+        50% {
+            background-image: url(./images/frame-image-3.jpg);
+        }
+        100% {
+            background-image: url(./images/frame-image-4.jpg);
+        }
+    }
+
+    }
+
+
+
+
+
+
