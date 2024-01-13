@@ -1,0 +1,336 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    color: white;
+    background-color: black;
+}
+
+a {
+    color: #777777;
+    text-decoration: none;
+}
+
+ul, li {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+button,
+button:active,
+input,
+input:active {
+    border: none;
+    outline: none;
+    border-radius: 4px;
+}
+
+button {    
+    font-size: 12px;
+    padding: 5px 10px;
+    color: white;
+    background-color: #db0001;
+}
+
+button:hover {
+    opacity: 70%;
+}
+
+button:active {
+    opacity: 100%;
+    transform: scale(1.08);
+}
+
+.language-button {
+    border: 1px solid white;
+    background-color: transparent;
+}
+
+.language-button img {
+    width: 10px;
+    height: auto;
+    margin-left: 5px;
+}
+
+.email-signup {
+    position: relative;
+    height: 40px;
+}
+
+.email-signup input {
+    width: 100%;
+    padding: 5px 20px;
+    height: inherit;
+    font-size: 14px;
+}
+
+.email-signup button {
+    position: absolute;
+    right: 0;
+    height: inherit;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+/* Main-page */
+.main-page {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    padding: 20px 8%;
+    background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(./images/header-image.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; 
+    text-align: center;
+}
+
+.main-page header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;   
+    align-items: center; 
+}
+
+.main-page .logo {
+    width: 100px;
+    height: auto;
+}
+
+.main-page .language-button {
+    margin-right: 10px;
+}
+
+.main-page main {
+    position: absolute;
+    width: 85%;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 650px;    
+}
+
+.main-page main h1 {
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 2;
+}
+
+.main-page main h3 {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.main-page main p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+/* Features */
+.features {
+    padding: 50px 10%;
+}
+
+.features .desc {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.features h2 {
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.features p {
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+.features img {
+    display: block;
+    width: 85%;
+    margin: 0 auto;
+}
+
+.features .row {
+    padding: 50px;
+}
+
+/* FAQ */
+.faq {
+    padding: 10px 10%;
+}
+
+.faq .col-12 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.faq h2 {
+    font-size: 20px;
+    margin-bottom: 70px;
+}
+
+.faq input[type="radio"] {
+    display: none;
+}
+
+.faq li {
+    list-style: none;
+}
+
+.faq li label {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-bottom: 3px;
+    padding: 10px;
+    font-size: 14px;
+    font-weight: 400;
+    border-radius: 2px;
+    background-color: #303030;   
+    cursor: pointer;  
+}
+
+.faq li label::after {
+    content: "+";
+    position: absolute; 
+    right: 20px;
+    font-size: 30px; 
+    transition: all 0.5s ease-in-out;
+}
+
+.faq li p {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 20px;
+    font-size: 14px;
+    border-radius: 2px;
+    background-color: #303030;
+    transition: all 0.5s ease-in-out;
+}
+
+.faq li input[type="radio"]:checked ~ p {
+    max-height: 600px;
+    padding: 30px 20px;
+}
+
+.faq li input[type="radio"]:checked ~ label::after {
+    transform: rotate(225deg);
+}
+
+/* Remind */
+.remind {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto 50px;
+    padding: 50px 30px;
+    text-align: center;
+}
+
+.remind small {
+    display: block;
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+
+/* Footer */
+footer {
+    padding: 50px 15%;
+    font-size: 14px;
+    color: #777777;
+}
+
+.footer-call {
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+.footer-link {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+
+.footer-link a {
+    margin-bottom: 10px;
+}
+
+footer .language-button {
+    margin-bottom: 20px;
+    padding: 10px 20px;
+}
+
+/* Media query */
+@media screen and (min-width: 600px) {
+
+    button {    
+        padding: 7px 20px;
+    }
+
+    .language-button {
+        padding: 7px 13px;
+    }    
+
+    .email-signup {
+        position: relative;
+        height: 55px;
+    }
+
+    .email-signup input {
+        font-size: 16px;
+    }
+
+    /* Main-page */
+    .main-page .logo {
+        width: 150px; 
+    }
+
+    .main-page main h1 {
+        font-size: 60px;
+        line-height: 1.2;
+    }
+
+    /* Features */
+    .features h2 {
+        font-size: 50px;
+    }
+
+    .features p {
+        font-size: 22px;
+        margin-bottom: 20px;
+    }
+
+    .features .row:nth-child(2n) {
+        flex-direction: row-reverse;
+    }
+
+    /* FAQ */
+    .faq h2 {
+        font-size: 40px;
+    }
+
+    .faq li label {
+        font-size: 18px;
+        padding: 20px;
+    }
+
+    .faq li p {
+        font-size: 18px;
+    }
+
+    /* Remind */
+    .remind {
+        height: 50px;
+        padding: 50px 0;
+    }
+}
