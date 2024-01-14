@@ -1,0 +1,37 @@
+
+new IdolModel
+    yuJin                                                                  new IdolModel
+name : 안유진                                                                   ㅣ
+year : 2003                                                                     ㅣ
+__proto__: ?   ===  IdolModel.prototype                                         ㅣ
+                      constructor:       --------------------------------->  IdolModel 
+                      __proto__: ?  === Object.prototype                    prototype:   ===  IdolModel.prototype
+                      sayHello: Function()                                  __proto__ : ?   === Function.prototype
+                                                                                                __proto__: ?   === Object.prototype
+
+new IdolModel
+  wonYoung
+name : 장원영
+year : 2002
+__proto__: ?
+
+
+
+
+
+
+서로가 서로를 참조하는 형태
+
+new 키워드로 함수의 객체를 생성할 때는
+실제 함수의 프로토타입 값을 __proto__에 집어넣음
+=> 상속체인의 바로 위 역할
+
+
+
+
+
+
+
+
+
+

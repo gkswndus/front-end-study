@@ -1,0 +1,42 @@
+Execution Context?
+(실행 컨텍스트)
+
+-Execution Context는 실행하려는 JS 코드와 코드를 실행할 때 필요한 정보를 담고있는 특수한 환경
+ 코드 실행에 필요한 모든 데이터를 들고있는 환경
+
+-Execution Context는 두가지로 나뉨
+    -Global Context
+     -> 최상위 Execution Context이다.
+     코드를 실행하면 무조건 생성되는 context로 웹에서의 window 객체나 nodeJS에서의 global 객체를 생성하고 들고있는다.
+    -Function Context
+     -> 함수가 실행될 때마다 함수별로 실행되는 context. 함수실행에 대한 모든 정보를 갖고있는다. 
+
+즉,
+실행을 하면 global context가 생기며
+함수를 실행할 때마다 각각 함수별로 function context가 또 생성이 된다.
+
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+
+자바스크립트는 싱글스레드
+싱글스레드 안에는 하나의 메모리힙, 하나의 콜스택이 존재
+1) 메모리힙
+: 메모리를 관리하는 공간
+2) 콜스택(Execution Context Stack)
+: Stack은 특정 데이터 구조를 말함. 나중에 넣은 데이터가 제일 먼저 나가는 구조.
+
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+
+Execution Context Stack
+
+-Creation Phase
+    -Global Object를 생성한다. window 또는 global 객체가 생성되고 함수에서는 arguments 객체가 생성한다.
+    -this를 window 또는 global에 바인딩한다.
+    -변수와 함수를 미리 Memory Heap에 배정하고 기본 값을 undefined로 지정한다. (=> hoisting이 일어나는 이유)
+
+-Execution Phase
+    -코드를 실행한다.
+    -필요하다면 새로운 Execution Context를 생성한다.
+
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+
+
