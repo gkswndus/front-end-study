@@ -1,0 +1,23 @@
+상속의 정의
+
+상속(inheritance)은 객체들 간의 관계를 구축하는 방법이다.
+수퍼클래스 또는 부모클래스 등의 기존의 클래스로부터
+속성과 동작을 상속받을 수 있다.
+
+
+
+    FemaleIdolModel             MaleIdolModel
+        name,                       name,
+        year,                       year,
+        dance()                     sing()
+
+
+              <공통되는 데이터 정리>
+
+        (부모/슈퍼 클래스 parent/super class)
+                    IdolModel
+                    name, year
+
+(자식 클래스 child class) (자식 클래스 child class)
+    FemaleIdolModel             MaleIdolModel
+        dance()                     sing()
